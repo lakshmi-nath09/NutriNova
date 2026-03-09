@@ -18,11 +18,9 @@ let calories;
 if(goal === "Weight Loss"){
 calories = weight * 22;
 }
-
 else if(goal === "Weight Gain"){
 calories = weight * 30;
 }
-
 else{
 calories = weight * 26;
 }
@@ -31,41 +29,56 @@ document.getElementById("calories").innerText =
 "Recommended Daily Calories: " + Math.round(calories);
 
 
+let table = document.getElementById("mealTable");
+
+table.innerHTML =
+"<tr><th>Meal</th><th>Food</th><th>Calories</th></tr>";
+
 let meals;
 
 if(goal === "Weight Loss"){
-meals =
-"Breakfast: Oatmeal (250 cal)\nLunch: Grilled Chicken Salad (400 cal)\nDinner: Vegetable Soup (300 cal)";
+
+meals = [
+["Breakfast","Oatmeal","250"],
+["Lunch","Grilled Chicken Salad","400"],
+["Dinner","Vegetable Soup","300"]
+];
+
 }
 
 else if(goal === "Weight Gain"){
-meals =
-"Breakfast: Peanut Butter Toast (400 cal)\nLunch: Rice + Chicken (600 cal)\nDinner: Pasta (500 cal)";
+
+meals = [
+["Breakfast","Peanut Butter Toast","400"],
+["Lunch","Rice + Chicken","600"],
+["Dinner","Pasta","500"]
+];
+
 }
 
 else{
-meals =
-"Breakfast: Smoothie (300 cal)\nLunch: Brown Rice + Veggies (450 cal)\nDinner: Soup + Salad (350 cal)";
+
+meals = [
+["Breakfast","Smoothie","300"],
+["Lunch","Brown Rice + Veggies","450"],
+["Dinner","Soup + Salad","350"]
+];
+
 }
 
-if(craving === "Sweet"){
-meals += "\nSnack: Fruit Yogurt";
-}
+for(let i=0;i<meals.length;i++){
 
-if(craving === "Spicy"){
-meals += "\nSnack: Spicy Chickpea Salad";
-}
+let row = table.insertRow();
 
-if(craving === "Fast Food"){
-meals += "\nHealthy Alternative: Veg Whole Wheat Burger";
-}
+row.insertCell(0).innerText = meals[i][0];
+row.insertCell(1).innerText = meals[i][1];
+row.insertCell(2).innerText = meals[i][2];
 
-document.getElementById("meals").innerText = meals;
+}
 
 generateWeeklyPlan();
 
 }
-
 
 function generateWeeklyPlan(){
 
@@ -98,7 +111,6 @@ row.insertCell(3).innerText = dinner[i];
 }
 
 }
-
 
 function addCalories(){
 
