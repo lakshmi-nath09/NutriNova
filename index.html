@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NutriNova - Smart Nutrition AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>NutriNova 🥗</h1>
+<p>AI Powered Smart Nutrition Recommendation</p>
+
+<div class="container">
+
+<h2>Your Health Profile</h2>
+
+<label>Height (cm)</label>
+<input type="number" id="height">
+
+<label>Weight (kg)</label>
+<input type="number" id="weight">
+
+<label>Age</label>
+<input type="number" id="age">
+
+<label>Fitness Goal</label>
+<select id="goal">
+<option>Weight Loss</option>
+<option>Weight Gain</option>
+<option>Maintain Health</option>
+</select>
+
+<label>Craving</label>
+<select id="craving">
+<option>Healthy</option>
+<option>Sweet</option>
+<option>Spicy</option>
+<option>Fast Food</option>
+</select>
+
+<button onclick="calculate()">Generate Plan</button>
+
+</div>
+
+<div class="results">
+
+<h2>Your Health Stats</h2>
+<p id="bmi"></p>
+<p id="calories"></p>
+
+<h2>Recommended Meals</h2>
+<p id="meals"></p>
+
+<h2>Weekly Meal Plan</h2>
+<table id="mealPlan">
+<tr>
+<th>Day</th>
+<th>Breakfast</th>
+<th>Lunch</th>
+<th>Dinner</th>
+</tr>
+</table>
+
+<h2>Calorie Tracker</h2>
+
+<input type="number" id="foodCalories" placeholder="Enter calories eaten">
+<button onclick="addCalories()">Add</button>
+
+<p id="totalCalories">Total Calories: 0</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
