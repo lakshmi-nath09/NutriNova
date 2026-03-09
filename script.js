@@ -4,7 +4,6 @@ function calculate(){
 
 let height = document.getElementById("height").value;
 let weight = document.getElementById("weight").value;
-let age = document.getElementById("age").value;
 let goal = document.getElementById("goal").value;
 let craving = document.getElementById("craving").value;
 
@@ -28,24 +27,29 @@ else{
 calories = weight * 26;
 }
 
-document.getElementById("calories").innerText = "Daily Calories Needed: " + Math.round(calories);
+document.getElementById("calories").innerText =
+"Recommended Daily Calories: " + Math.round(calories);
+
 
 let meals;
 
 if(goal === "Weight Loss"){
-meals = "Breakfast: Oatmeal (250 cal)\nLunch: Grilled Chicken Salad (400 cal)\nDinner: Vegetable Soup (300 cal)";
+meals =
+"Breakfast: Oatmeal (250 cal)\nLunch: Grilled Chicken Salad (400 cal)\nDinner: Vegetable Soup (300 cal)";
 }
 
 else if(goal === "Weight Gain"){
-meals = "Breakfast: Peanut Butter Toast (400 cal)\nLunch: Rice + Chicken (600 cal)\nDinner: Pasta (500 cal)";
+meals =
+"Breakfast: Peanut Butter Toast (400 cal)\nLunch: Rice + Chicken (600 cal)\nDinner: Pasta (500 cal)";
 }
 
 else{
-meals = "Breakfast: Smoothie (300 cal)\nLunch: Brown Rice + Vegetables (450 cal)\nDinner: Soup + Salad (350 cal)";
+meals =
+"Breakfast: Smoothie (300 cal)\nLunch: Brown Rice + Veggies (450 cal)\nDinner: Soup + Salad (350 cal)";
 }
 
 if(craving === "Sweet"){
-meals += "\nSnack: Dark Chocolate or Fruit Yogurt";
+meals += "\nSnack: Fruit Yogurt";
 }
 
 if(craving === "Spicy"){
@@ -53,7 +57,7 @@ meals += "\nSnack: Spicy Chickpea Salad";
 }
 
 if(craving === "Fast Food"){
-meals += "\nHealthy Alternative: Whole Wheat Veg Burger";
+meals += "\nHealthy Alternative: Veg Whole Wheat Burger";
 }
 
 document.getElementById("meals").innerText = meals;
@@ -62,15 +66,25 @@ generateWeeklyPlan();
 
 }
 
+
 function generateWeeklyPlan(){
 
 let table = document.getElementById("mealPlan");
 
-let days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+table.innerHTML =
+"<tr><th>Day</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>";
 
-let breakfast = ["Oats","Smoothie","Egg Toast","Pancakes","Fruit Bowl","Yogurt","Omelette"];
-let lunch = ["Chicken Salad","Brown Rice","Quinoa Bowl","Veg Wrap","Grilled Fish","Rice + Dal","Veg Pasta"];
-let dinner = ["Soup","Grilled Veggies","Salad","Chicken Bowl","Veg Curry","Steamed Veg","Light Pasta"];
+let days =
+["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+
+let breakfast =
+["Oats","Smoothie","Egg Toast","Pancakes","Fruit Bowl","Yogurt","Omelette"];
+
+let lunch =
+["Chicken Salad","Brown Rice","Quinoa Bowl","Veg Wrap","Grilled Fish","Rice + Dal","Veg Pasta"];
+
+let dinner =
+["Soup","Grilled Veg","Salad","Chicken Bowl","Veg Curry","Steamed Veg","Light Pasta"];
 
 for(let i=0;i<7;i++){
 
@@ -85,12 +99,14 @@ row.insertCell(3).innerText = dinner[i];
 
 }
 
+
 function addCalories(){
 
 let food = document.getElementById("foodCalories").value;
 
 totalCalories += Number(food);
 
-document.getElementById("totalCalories").innerText = "Total Calories: " + totalCalories;
+document.getElementById("totalCalories").innerText =
+"Total Calories: " + totalCalories;
 
 }
