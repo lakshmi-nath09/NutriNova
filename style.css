@@ -1,0 +1,47 @@
+body{
+font-family: Arial;
+background:#f4f8f5;
+text-align:center;
+}
+
+h1{
+color:#2e7d32;
+}
+
+.container{
+background:white;
+padding:20px;
+width:300px;
+margin:auto;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+input,select{
+width:90%;
+padding:8px;
+margin:5px;
+}
+
+button{
+background:#2e7d32;
+color:white;
+padding:10px;
+border:none;
+cursor:pointer;
+margin-top:10px;
+}
+
+.results{
+margin-top:30px;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+table,th,td{
+border:1px solid black;
+padding:8px;
+}
