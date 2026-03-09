@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NutriNova - Smart Nutrition AI</title>
+<title>NutriNova</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<header>
 <h1>NutriNova 🥗</h1>
-<p>AI Powered Smart Nutrition Recommendation</p>
+<p>AI Powered Smart Nutrition Recommendation System</p>
+</header>
 
-<div class="container">
+<div class="main">
 
-<h2>Your Health Profile</h2>
+<div class="card">
+
+<h2>User Health Profile</h2>
 
 <label>Height (cm)</label>
 <input type="number" id="height">
@@ -39,33 +43,50 @@
 <option>Fast Food</option>
 </select>
 
-<button onclick="calculate()">Generate Plan</button>
+<button onclick="calculate()">Generate Meal Plan</button>
 
 </div>
 
-<div class="results">
 
-<h2>Your Health Stats</h2>
+<div class="card results">
+
+<h2>Health Analysis</h2>
 <p id="bmi"></p>
 <p id="calories"></p>
 
 <h2>Recommended Meals</h2>
 <p id="meals"></p>
 
-<h2>Weekly Meal Plan</h2>
+</div>
+
+</div>
+
+
+<div class="weekly">
+
+<h2>Weekly Meal Planner</h2>
+
 <table id="mealPlan">
+
 <tr>
 <th>Day</th>
 <th>Breakfast</th>
 <th>Lunch</th>
 <th>Dinner</th>
 </tr>
+
 </table>
+
+</div>
+
+
+<div class="tracker">
 
 <h2>Calorie Tracker</h2>
 
-<input type="number" id="foodCalories" placeholder="Enter calories eaten">
-<button onclick="addCalories()">Add</button>
+<input type="number" id="foodCalories" placeholder="Enter calories consumed">
+
+<button onclick="addCalories()">Add Calories</button>
 
 <p id="totalCalories">Total Calories: 0</p>
 
