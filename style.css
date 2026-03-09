@@ -1,47 +1,91 @@
 body{
 font-family: Arial;
-background:#f4f8f5;
+background:#f2f7f4;
+margin:0;
 text-align:center;
 }
 
-h1{
-color:#2e7d32;
+header{
+background:#2e7d32;
+color:white;
+padding:20px;
 }
 
-.container{
+.main{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.card{
 background:white;
-padding:20px;
-width:300px;
-margin:auto;
-border-radius:10px;
-box-shadow:0px 0px 10px gray;
+padding:25px;
+width:320px;
+border-radius:12px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+text-align:left;
+}
+
+.card h2{
+text-align:center;
 }
 
 input,select{
-width:90%;
-padding:8px;
-margin:5px;
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
 button{
+width:100%;
+padding:12px;
 background:#2e7d32;
 color:white;
-padding:10px;
 border:none;
+border-radius:6px;
 cursor:pointer;
-margin-top:10px;
+font-size:15px;
 }
 
-.results{
-margin-top:30px;
+button:hover{
+background:#1b5e20;
+}
+
+.weekly{
+margin-top:40px;
 }
 
 table{
 margin:auto;
 border-collapse:collapse;
+width:80%;
+background:white;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
 }
 
-table,th,td{
-border:1px solid black;
-padding:8px;
+th{
+background:#2e7d32;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+border:1px solid #ddd;
+}
+
+.tracker{
+margin-top:40px;
+background:white;
+padding:25px;
+width:320px;
+margin-left:auto;
+margin-right:auto;
+border-radius:10px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
 }
